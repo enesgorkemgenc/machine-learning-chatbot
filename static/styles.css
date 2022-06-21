@@ -1,0 +1,148 @@
+body{
+    background-color: #DEFCF9;
+    font-family: montserrat !important;
+}
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.data-table{
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
+.data-table tr{
+    border: 1px solid #c176fe;
+}
+
+.data-table .table-head{
+    color: #3c084f;
+    font-size: 21px;
+    height: 64px;
+    border: none;
+}
+
+.data-table .th-left{
+    background-color: #edd6ff;
+    border-top-left-radius: 24px;
+    border: none;
+}
+.data-table .th-right{
+    background-color: #edd6ff;
+    border-top-right-radius: 24px;
+    border: none ;
+}
+
+.data-table td{
+    background-color: #fdfdff;
+    height: 44px;
+    border-top: 1px solid #c176fe;
+    border-bottom: 1px solid #c176fe;
+}
+
+.chat-container{
+    width: 48%;
+    margin: 4% auto;
+}
+.chat-body{
+    height: 72vh;
+    border: 1px solid #c176fe;
+    border-radius: 12px 12px 0 0;
+    background-color: #fdfdff;
+    padding: 24px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.chat-footer{
+    border: 1px solid #c176fe;
+    border-top: none;
+    height: 10vh;
+    border-radius: 0 0 8px 8px;
+    background-color: #edd6ff;
+}
+
+.message{
+    display: block;
+    width: 95% !important;
+    margin: auto;
+    height: fit-content;
+    color: #3c084f;
+    font-weight: 500;
+    display: flex;
+    align-items: center ;
+}
+
+.user-message{
+    float: right;
+    text-align: right;
+    background-color: #CADEFC;
+    border-radius: 32px 32px 4px 32px;
+    max-width: 48%;
+}
+
+.bot-message{
+    float: left;
+    text-align: left;
+    background-color: #CADEFC;
+    border-radius: 32px 32px 32px 4px;
+    max-width: 48%;
+}
+
+.bot-message p{
+    padding: 12px 20px;
+    margin: auto;
+}
+
+.user-message p{
+    padding: 12px 20px;
+    margin: auto;
+}
+
+.toright{
+    justify-content: end;
+}
+.toleft{
+    justify-content: start;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textbox{
+    width: 70%;
+    margin: auto;
+    height: 80%;
+    display: block;
+    padding: 0 8px;
+    font-size: medium;
+    font-family: montserrat !important;
+    font-weight: 500;
+    border-radius: 16px;
+    border: 1.5px solid #7d3b93;
+    outline: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px #a8c1e8;
+    border-radius: 100px;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: #6f2888;
+    border-radius: 100px;
+}

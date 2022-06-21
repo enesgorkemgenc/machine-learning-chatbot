@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <table class="data-table">
+        <tr class="table-head">
+            <td class="th-left">Request</td>
+            <td class="th-right">Response</td>
+        </tr>
+
+        {% for req, res in chat_data.items %}
+            <tr>
+                <td>{{ req }}</td>
+                <td>{{ res }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock content %}
