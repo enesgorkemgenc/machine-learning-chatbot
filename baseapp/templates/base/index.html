@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="chat-container">
+        <div class="chat-body">
+
+            <div class="message toright">
+                <div class="user-message">
+                    <p>Lorem</p>
+                </div>
+            </div>
+
+            <div class="message toleft">
+                <div class="bot-message">
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+
+            <div class="message toright">
+                <div class="user-message">
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </div>
+
+            <div class="message toleft">
+                <div class="bot-message">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="message toright">
+                <div class="user-message">
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+
+            <div class="message toleft">
+                <div class="bot-message">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                </div>
+            </div>
+
+            <div class="message toright">
+                <div class="user-message">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </div>
+            </div>
+
+            <div class="message toleft">
+                <div class="bot-message">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="chat-footer">
+            <form>
+                {% csrf_token %}
+
+                <input type="text" class="textbox" placeholder="Type a message..." name="message">
+
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
