@@ -9,16 +9,15 @@ import sqlite3
 
 
 def get_homepage(request):
-    
-    return render(request, "base/index.html")
-
-
+    context = {}
+    return render(request, "base/index.html", context)
 
 
 def get_data_page(request):
 
     connection = sqlite3.connect("chat.db")
     cursor = connection.cursor()
+    
     cursor.execute("SELECT * FROM tbl_chat")
     data = {req:res for (req, res) in cursor.fetchall()}
     
