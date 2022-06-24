@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'channels',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "baseapp.apps.BaseappConfig"
+    "baseapp"
 ]
+
+ASGI_APPLICATION = "mlchatbot.asgi.application"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
