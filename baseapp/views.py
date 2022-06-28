@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .dbfunctions import *
 
@@ -14,6 +14,9 @@ def get_homepage(request):
 
 
 def get_data_page(request):
+
+    if not request.user.is_authenticated:
+        return redirect("homepage")
 
     connection = sqlite3.connect("chat.db")
     cursor = connection.cursor()
