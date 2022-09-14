@@ -1,15 +1,15 @@
 from django.shortcuts import render, redirect
 
-from .dbfunctions import *
-
 import sqlite3
 
+from .models import Message
 
 # Create your views here.
 
 
 def get_homepage(request):
     context = {}
+
     return render(request, "base/index.html", context)
 
 
@@ -18,13 +18,7 @@ def get_data_page(request):
     if not request.user.is_authenticated:
         return redirect("homepage")
 
-    connection = sqlite3.connect("chat.db")
-    cursor = connection.cursor()
-    
-    cursor.execute("SELECT * FROM tbl_chat")
-    data = {req:res for (req, res) in cursor.fetchall()}
-    
-    connection.close()
+    messages = Message.objects.all()
 
-    context = {"chat_data": data}
+    context = {"messages": messages}
     return render(request, "base/data.html", context)
