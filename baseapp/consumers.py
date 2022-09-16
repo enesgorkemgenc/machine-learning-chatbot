@@ -1,11 +1,10 @@
 import json
 from channels.generic.websocket import WebsocketConsumer
-from .dbfunctions import *
-
+from . import methods, models
 
 class ChatConsumer(WebsocketConsumer):
 
-    old_response = ""
+    old_response = None
 
 
     def connect(self):
@@ -18,20 +17,13 @@ class ChatConsumer(WebsocketConsumer):
 
     def receive(self, text_data):
 
-            message = json.loads(text_data)["message"]
-            
-            returned_data = handle_request(self.old_response,message)
+        message_text = json.loads(text_data)["message"]
         
-            response = returned_data["response_text"]
-            self.old_response = response
-            
+        response = methods.handle_chat(self.old_response, message_text)
 
-            self.send(text_data=json.dumps({
-                "type":"chat-user",
-                "message":message
-            }))
+        self.old_response = response
 
-            self.send(text_data=json.dumps({
-                "type":"chat-bot",
-                "message":response
-            }))
+        self.send(text_data=json.dumps({
+            "type":"chat-bot",
+            "message":response.content
+        }))

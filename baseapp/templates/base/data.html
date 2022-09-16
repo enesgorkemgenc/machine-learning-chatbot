@@ -8,10 +8,10 @@
             <td class="th-right">Response</td>
         </tr>
 
-        {% for req, res in chat_data.items %}
+        {% for message in messages %}
             <tr>
-                <td>{{ req }}</td>
-                <td>{{ res }}</td>
+                <td>{{ message }}</td>
+                <td>{% for response in message.responses.all %}{{ response }}, {% endfor %}</td>
             </tr>
         {% endfor %}
 

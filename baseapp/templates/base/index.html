@@ -17,19 +17,16 @@
 
     <script type="text/javascript">
 
+        let messages = document.getElementById("messages")
         let url = `ws://${window.location.host}/ws/socket-server/`
 
         const chatSocket = new WebSocket(url)
 
+
         chatSocket.onmessage = function(e){
             let data = JSON.parse(e.data)
-
-            if(data.type === "chat-user"){
-                let messages = document.getElementById("messages")
-
-                messages.insertAdjacentHTML("beforeend",`<div class="message toright"><div class="user-message"><p>${data.message}</p></div></div>`)
-            }
-            else if(data.type === "chat-bot"){
+            
+            if(data.type === "chat-bot"){
                 let messages = document.getElementById("messages")
 
                 messages.insertAdjacentHTML("beforeend",`<div class="message toleft"><div class="bot-message"><p>${data.message}</p></div></div>`)
@@ -44,6 +41,7 @@
             chatSocket.send(JSON.stringify({
                 "message":message
             }))
+            messages.insertAdjacentHTML("beforeend",`<div class="message toright"><div class="user-message"><p>${message}</p></div></div>`)
             form.reset()
         })
 
