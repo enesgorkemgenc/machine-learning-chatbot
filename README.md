@@ -5,7 +5,9 @@
 ## Demo Image and Video
 
 ![mlcharbotss2](https://user-images.githubusercontent.com/93938698/190747602-9fd2fbe6-a799-4f2e-97fb-f57ff2b4e42e.PNG)
+
 Click the image down below to open the demo video of the project.
+
 [![Open youtube video](https://img.youtube.com/vi/HauQhleuncw/0.jpg)](https://www.youtube.com/watch?v=HauQhleuncw)
 
 ## How does it work ?
