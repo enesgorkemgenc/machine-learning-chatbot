@@ -29,11 +29,3 @@ if new_message has any response:
 else:
 
       return a random message that has no response
-
-  
-## Technologies I used
-
-- HTML, CSS, JavaScript
-- Python, Django, Django Channels
-  
-  
