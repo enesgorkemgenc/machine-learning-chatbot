@@ -2,13 +2,9 @@
 
 > A chatbot that learns to answer through chatting.
 
-## Demo Image and Video
+## Demo GIF
 
-![mlcharbotss2](https://user-images.githubusercontent.com/93938698/190747602-9fd2fbe6-a799-4f2e-97fb-f57ff2b4e42e.PNG)
-
-Click the image down below to open the demo video of the project.
-
-[![Open youtube video](https://img.youtube.com/vi/HauQhleuncw/0.jpg)](https://www.youtube.com/watch?v=HauQhleuncw)
+![mlchatbotdemogif](https://user-images.githubusercontent.com/93938698/190865693-2b15bc83-e4b4-41f0-88ea-3ba2d7e4967b.gif)
 
 ## How does it work ?
 
